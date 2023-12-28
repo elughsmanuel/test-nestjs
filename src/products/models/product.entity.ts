@@ -12,7 +12,13 @@ export class Product {
     description: string;
 
     @Column()
+    price: number;
+
+    @Column()
     category: string;
+
+    @Column()
+    quantity: number;
 
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     created_at: Date;
