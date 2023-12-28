@@ -21,6 +21,7 @@ export class ProductsController {
     @HttpCode(HttpStatus.CREATED)
     async create(@Body() product: Product): Promise<Product> {
         const createdProduct = await this.productService.create(product);
+
         return createdProduct;
     }
 
@@ -66,6 +67,7 @@ export class ProductsController {
         }
     
         await this.productService.delete(id);
+        
         return { message: 'Product deleted successfully' };
     }
 }
