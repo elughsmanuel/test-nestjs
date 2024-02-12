@@ -11,7 +11,7 @@ import {
     HttpStatus,
 } from '@nestjs/common';
 import { ProductsService } from './products.service';
-import { Product } from './models/product.entity';
+import { Product } from '../models/product.entity';
 
 @Controller('api/v1/products')
 export class ProductsController {
